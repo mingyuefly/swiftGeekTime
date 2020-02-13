@@ -8,26 +8,48 @@
 
 import SwiftUI
 
-extension UserDefaults {
-    public enum Keys {
-        static let hadShownUserGuide = "hadShownUserGuide"
+//extension UserDefaults {
+//    public enum Keys {
+//        static let hadShownUserGuide = "hadShownUserGuide"
+//    }
+//    var hasShownUserGuide:Bool {
+//        set {
+//            set(newValue, forKey: Keys.hadShownUserGuide)
+//        }
+//        get {
+//            bool(forKey: Keys.hadShownUserGuide)
+//        }
+//    }
+//}
+
+@propertyWrapper
+struct UserDefaultsWrapper<T> {
+    var key:String
+    var defaultValue:T
+    init(_ key:String, defaultValue:T) {
+        self.key = key
+        self.defaultValue = defaultValue
     }
-    var hasShownUserGuide:Bool {
-        set {
-            set(newValue, forKey: Keys.hadShownUserGuide)
-        }
+    var wrappedValue:T{
         get {
-            bool(forKey: Keys.hadShownUserGuide)
+            return UserDefaults.standard.value(forKey: key) as? T ?? defaultValue
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: key)
         }
     }
 }
 
 struct PropertyWrapperView: View {
-    @State private var showText = UserDefaults.standard.hasShownUserGuide ? "已经展示过":"没有展示过"
+    
+    @UserDefaultsWrapper("hadShownUserGuide", defaultValue: false)
+    static var hadShownUserGuide:Bool
+    
+    @State private var showText = PropertyWrapperView.hadShownUserGuide ? "已经展示过":"没有展示过"
     var body: some View {
         Button(action:{
-            if (!UserDefaults.standard.hasShownUserGuide) {
-                UserDefaults.standard.hasShownUserGuide = true
+            if (!PropertyWrapperView.hadShownUserGuide) {
+                PropertyWrapperView.hadShownUserGuide = true
                 self.showText = "已经展示过"
             }
         }) {
