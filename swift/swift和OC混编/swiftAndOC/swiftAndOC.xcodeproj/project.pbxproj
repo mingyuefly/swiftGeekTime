@@ -15,6 +15,7 @@
 		92A3387A23FFD95C0014A129 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92A3387823FFD95C0014A129 /* LaunchScreen.storyboard */; };
 		92A3388423FFDDE90014A129 /* OCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A3388323FFDDE90014A129 /* OCViewController.m */; };
 		92A3388623FFEBE70014A129 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A3388523FFEBE60014A129 /* Person.swift */; };
+		92A338892400026D0014A129 /* Teacher.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A338882400026C0014A129 /* Teacher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		92A3388223FFDDE90014A129 /* OCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCViewController.h; sourceTree = "<group>"; };
 		92A3388323FFDDE90014A129 /* OCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCViewController.m; sourceTree = "<group>"; };
 		92A3388523FFEBE60014A129 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		92A338872400026C0014A129 /* Teacher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Teacher.h; sourceTree = "<group>"; };
+		92A338882400026C0014A129 /* Teacher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Teacher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				92A3388223FFDDE90014A129 /* OCViewController.h */,
 				92A3388323FFDDE90014A129 /* OCViewController.m */,
 				92A3388523FFEBE60014A129 /* Person.swift */,
+				92A338872400026C0014A129 /* Teacher.h */,
+				92A338882400026C0014A129 /* Teacher.m */,
 				92A3387323FFD9570014A129 /* Main.storyboard */,
 				92A3387623FFD95C0014A129 /* Assets.xcassets */,
 				92A3387823FFD95C0014A129 /* LaunchScreen.storyboard */,
@@ -149,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92A338892400026D0014A129 /* Teacher.m in Sources */,
 				92A3388623FFEBE70014A129 /* Person.swift in Sources */,
 				92A3387223FFD9570014A129 /* ViewController.swift in Sources */,
 				92A3386E23FFD9570014A129 /* AppDelegate.swift in Sources */,
