@@ -18,10 +18,12 @@ class ViewController: UIViewController {
         bird.fly()
         bird.wings = 4
         print(bird.wings)
+        bird.overlook()
         let plane = Plane()
         plane.fly()
         plane.height = 24.0
         print(plane.height)
+        plane.overlook()
     }
 }
 

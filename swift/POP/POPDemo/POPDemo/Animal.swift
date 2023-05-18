@@ -16,6 +16,9 @@ class Animal {
     func eat() {
         print("eat food")
     }
+    init() {
+        
+    }
 }
 
 class Bird: Animal, Flight {
@@ -48,6 +51,12 @@ class Bird: Animal, Flight {
     }
     func fly() {
         print("bird fly")
+    }
+    func overlook() {
+        print("bird overlook")
+    }
+    override init() {
+        
     }
 }
 
@@ -111,4 +120,8 @@ protocol Flight {
     var height: Float { get }
     var volocity: Float { get }
     func fly()
+}
+
+extension Flight {
+    func overlook() {}
 }

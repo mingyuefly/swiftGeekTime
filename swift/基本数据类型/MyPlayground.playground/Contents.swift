@@ -71,17 +71,17 @@ let sample:AudioSample = 32
 //print(error)
 
 // 元组的分解
-//let error = (1, "没有权限")
-//let (errorCode, errorMessage) = error;
-//print(errorCode)
-//print(errorMessage)
+let error = (1, "没有权限")
+let (errorCode, errorMessage) = error;
+print(errorCode)
+print(errorMessage)
 
 func writeFile(content:String) -> (errorCode:Int, errorMessage:String) {
     return (1, "没有权限")
 }
 
-let error = writeFile(content: "")
-print(error)
+//let error = writeFile(content: "")
+//print(error)
 
 /**
  optional
@@ -96,9 +96,19 @@ print(error)
 
 // 绑定
 //let str:String? = "abc"
+////let str:String? = nil
 //if let actualStr = str {
 //    let count = actualStr.count
 //    print(count)
+//}
+
+//var str1:String? = "abc"
+//if let actualStr = str1 {
+//    let count = actualStr.count
+//    print(count)
+//    str1 = "abcd"
+//    print(actualStr)
+//    print(str1)
 //}
   
 // 强制展开
