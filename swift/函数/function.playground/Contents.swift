@@ -245,7 +245,7 @@ var str = "Hello, playground"
  高阶函数
  */
 
-//// map filter reduce
+// map filter reduce
 //var numbers = [1, 2, 4, 5, 10]
 //print(numbers.map{$0 * 10})
 //print(numbers.filter({$0 > 4}))

@@ -62,6 +62,10 @@ class ViewController: UIViewController {
         // contracts中第二个元素值不会改变
         print(contracts)
         
+        // 可以直接修改数组中元素的变量值
+        contracts[1].name = "nameZ"
+        print(contracts)
+        
         var student2 = students[1]
         student2.name = "nameZ"
         // students中第二个元素值会改变

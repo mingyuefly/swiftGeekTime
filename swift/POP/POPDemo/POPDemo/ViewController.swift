@@ -7,6 +7,11 @@
 
 import UIKit
 
+class People {
+    var name = ""
+    
+}
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -24,6 +29,17 @@ class ViewController: UIViewController {
         plane.height = 24.0
         print(plane.height)
         plane.overlook()
+        
+        
+//        let zhangsan = People()
+//        zhangsan.name = "zhangsan"
+//
+//        let lisi = zhangsan
+//        lisi.name = "lisi"
+//
+//        print(zhangsan.name)
+//        print(lisi.name)
+        
     }
 }
 
